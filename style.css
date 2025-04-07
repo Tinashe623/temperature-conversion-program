@@ -47,7 +47,7 @@ label {
 button {
   width: 100%;
   margin-top: 15px;
-  background-color: hsl(0, 100%, 60%);
+  background-color: hsl(0, 100%, 50%);
   color: #fff;
   font-size: 1.5em;
   border: none;
@@ -59,7 +59,35 @@ button {
 }
 
 button:hover {
-  opacity: 0.8;
+  font-size: 1.4rem;
+  color: #ffffff;
+  position: relative;
+  display: inline-block;
+}
+
+button::after,
+button::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #ff0000, #00ffff);
+  bottom: -5px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s ease-out;
+}
+
+button::before {
+  top: -5px;
+  bottom: auto;
+  transform-origin: left;
+}
+
+button:hover::after,
+button:hover::before {
+  transform: scaleX(1);
 }
 
 /* PARAGRAPH */
