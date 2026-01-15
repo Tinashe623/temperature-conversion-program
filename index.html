@@ -42,10 +42,14 @@
             </label>
         </div>
 
-        <div class="result-container">
+        <div class="result-container" onclick="copyResult()">
+            <div id="warningAlert" class="warning-alert">Below Absolute Zero!</div>
             <div id="result">0.0</div>
             <div class="result-unit" id="resultUnit">Fahrenheit</div>
+            <p class="copy-hint">Click to copy result</p>
         </div>
+
+        <div id="toast" class="toast">Copied to clipboard!</div>
 
         <div class="history-section" id="historySection">
             <div class="history-header">

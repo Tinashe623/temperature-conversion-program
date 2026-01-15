@@ -21,6 +21,7 @@ function performConversion() {
     if (inputVal === "") {
         resultDisplay.textContent = "0.0";
         updateVisuals(0, 'Fahrenheit');
+        checkAbsoluteZero(0, 'Celsius'); // Clear warning if empty
         return;
     }
 
@@ -47,11 +48,44 @@ function performConversion() {
     resultUnitLabel.textContent = unitLabel;
 
     updateVisuals(result, unitLabel);
+    checkAbsoluteZero(temp, toFahrenheit || toKelvin ? 'Celsius' : 'Fahrenheit');
     saveToHistory(temp, result, unitLabel);
 }
 
+function checkAbsoluteZero(temp, fromUnit) {
+    const warning = document.getElementById("warningAlert");
+    let isBelow = false;
+    
+    if (fromUnit === 'Celsius' && temp < -273.15) isBelow = true;
+    if (fromUnit === 'Fahrenheit' && temp < -459.67) isBelow = true;
+
+    if (isBelow) {
+        warning.classList.add("active");
+    } else {
+        warning.classList.remove("active");
+    }
+}
+
+async function copyResult() {
+    const text = resultDisplay.textContent;
+    try {
+        await navigator.clipboard.writeText(text);
+        showToast();
+    } catch (err) {
+        console.error('Failed to copy: ', err);
+    }
+}
+
+function showToast() {
+    const toast = document.getElementById("toast");
+    toast.classList.add("active");
+    setTimeout(() => {
+        toast.classList.remove("active");
+    }, 2000);
+}
+
 function updateVisuals(temp, unit) {
-    // Normalize to Celsius for color mapping
+    // ... same as before but refined ...
     let celsius;
     if (unit === "Fahrenheit") {
         celsius = (temp - 32) * (5 / 9);
@@ -72,6 +106,7 @@ function updateVisuals(temp, unit) {
         hue = 10;  // Hot Red
     }
 
+    // Dynamic background with more depth
     body.style.background = `linear-gradient(135deg, hsl(${hue}, 40%, 10%) 0%, hsl(${hue}, 40%, 20%) 100%)`;
 }
 
