@@ -3,33 +3,60 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Temp conversion program</title>
+    <title>TempFlow | Modern Conversion</title>
     <link
       rel="icon"
-      type="image.x-icon"
+      type="image/x-icon"
       href="https://www.google.com/s2/u/0/favicons?domain=css-tricks.com"
     />
-    <link <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- Background Decor -->
+    <div class="bg-blur">
+        <div class="blob"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
     <main class="container">
-      <!-- FORM -->
-      <form action="">
-        <h1>Temperature conversion</h1>
-        <input type="number" id="textBox" value="0" />
-        <br />
-        <!-- TO FAHRENHEIT -->
-        <input type="radio" id="toFahrenheit" name="unit" />
-        <label for="toFahrenheit">Celsius ➡ Fahrenheit</label>
-        <br />
-        <!-- TO CELSIUS -->
-        <input type="radio" id="toCelsius" name="unit" />
-        <label for="toCelsius">Fahrenheit ➡ Celsius</label>
-        <br />
-        <!-- BUTTON -->
-        <button type="button" onclick="convert()">Submit</button>
-        <p id="result"></p>
-      </form>
+      <div class="glass-card">
+        <h1>TempFlow</h1>
+        <p class="subtitle">Fast, precise temperature conversion</p>
+
+        <div class="input-group">
+            <input type="number" id="textBox" placeholder="0" autofocus />
+        </div>
+
+        <div class="unit-selector">
+            <label class="unit-option">
+                <input type="radio" name="unit" id="toFahrenheit" checked />
+                <span class="unit-label">°C ➡ °F</span>
+            </label>
+            <label class="unit-option">
+                <input type="radio" name="unit" id="toCelsius" />
+                <span class="unit-label">°F ➡ °C</span>
+            </label>
+            <label class="unit-option">
+                <input type="radio" name="unit" id="toKelvin" />
+                <span class="unit-label">°C ➡ K</span>
+            </label>
+        </div>
+
+        <div class="result-container">
+            <div id="result">0.0</div>
+            <div class="result-unit" id="resultUnit">Fahrenheit</div>
+        </div>
+
+        <div class="history-section" id="historySection">
+            <div class="history-header">
+                <p class="history-title">Recent</p>
+                <button class="clear-btn" onclick="clearHistory()">Clear</button>
+            </div>
+            <div id="historyList">
+                <!-- History items injected here -->
+            </div>
+        </div>
+      </div>
     </main>
 
     <script src="script.js"></script>
