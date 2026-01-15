@@ -240,6 +240,31 @@ h1 {
     visibility: visible;
 }
 
+/* Responsive Adjustments */
+@media (max-width: 480px) {
+    .glass-card {
+        padding: 24px 20px;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    #textBox {
+        font-size: 2rem;
+        padding: 12px;
+    }
+
+    #result {
+        font-size: 2.5rem;
+    }
+
+    .unit-label {
+        padding: 10px 5px;
+        font-size: 0.75rem;
+    }
+}
+
 .result-unit {
     font-size: 1rem;
     color: var(--text-muted);
