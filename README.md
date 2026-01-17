@@ -1,39 +1,36 @@
-# 🌡️ TempFlow | Modern Temperature Converter
+# TempFlow | Modern Temperature Conversion
 
-**TempFlow** is a sleek, professional, and interactive temperature conversion tool built for the modern web. Designed with a premium Glassmorphism aesthetic, it provides real-time results, multi-unit support, and dynamic visual feedback.
+**Live App: [tempflow-app.netlify.app](https://tempflow-app.netlify.app/)**
 
-![Project Preview](preview.png)
+TempFlow is a sleek, fast, and responsive temperature conversion tool built with modern web technologies. It allows users to convert between Celsius, Fahrenheit, and Kelvin in real-time with a beautiful glassmorphism UI.
+
+![TempFlow Preview](preview.png)
 
 ## ✨ Features
 
--   **Glassmorphism UI**: A stunning, semi-transparent interface with backdrop blurring and vibrant gradients.
--   **Real-time Conversion**: No "Submit" button required. Results update instantly as you type.
--   **Dynamic Visual Feedback**: The background theme shifts dynamically (Cold -> Warm -> Hot) based on the temperature value.
--   **Multi-Unit Support**: Seamlessly convert between **Celsius**, **Fahrenheit**, and **Kelvin**.
--   **Copy to Clipboard**: One-click to copy results with a sleek toast notification.
--   **Absolute Zero Warning**: Intelligent detection of temperatures below physical limits (-273.15°C).
--   **Conversion History**: Automatically tracks your recent calculations using `localStorage`.
--   **Fully Responsive**: Optimized for every screen size, from mobile to desktop.
+- **Real-time Conversion:** Results update instantly as you type.
+- **Three-Way Conversion:** Support for Celsius, Fahrenheit, and Kelvin.
+- **Visual Feedback:** Dynamic background colors that change based on temperature (Cold ➡ Hot).
+- **Conversion History:** Keep track of your last 5 conversions.
+- **Copy to Clipboard:** One-tap copying for your conversion results.
+- **Fully Responsive:** Optimized for mobile, tablet, and desktop devices.
+- **High Performance:** Lightweight and optimized for fast loading.
 
-## 🚀 Technologies Used
+## 🚀 Deployment
 
--   **HTML5**: Semantic structure and accessibility.
--   **CSS3**: Custom variables, Glassmorphism, and keyframe animations.
--   **JavaScript (ES6+)**: Real-time logic, dynamic styling, and localStorage management.
--   **Google Fonts**: "Outfit" typography for a modern readability.
+This project is configured for easy deployment on **Netlify**.
 
-## 🛠️ How to Run
+1. Fork or clone this repository.
+2. Connect your repository to Netlify.
+3. Netlify will automatically detect the static files and the `netlify.toml` configuration.
+4. Deploy and enjoy!
 
-1.  Clone the repository:
-    ```bash
-    git clone https://github.com/YourUsername/temperature-conversion-program.git
-    ```
-2.  Open `index.html` in any modern web browser.
+## 🛠️ Tech Stack
+
+- **HTML5:** Semantic structure and SEO optimization.
+- **CSS3:** Advanced styling with Glassmorphism and responsive media queries.
+- **JavaScript (Vanilla):** Light and efficient logic for conversions and UI interactivity.
 
 ## 📝 License
 
-Distributed under the MIT License. See `LICENSE` for more information.
-
----
-
-*Found this project useful? Give it a ⭐️!*
+This project is open-source and available under the [MIT License](LICENSE).

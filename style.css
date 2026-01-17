@@ -241,27 +241,69 @@ h1 {
 }
 
 /* Responsive Adjustments */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    
     .glass-card {
-        padding: 24px 20px;
+        padding: 30px;
     }
 
     h1 {
-        font-size: 1.75rem;
+        font-size: 1.8rem;
     }
 
     #textBox {
-        font-size: 2rem;
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .glass-card {
+        padding: 24px 20px;
+        border-radius: 20px;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    .subtitle {
+        font-size: 0.85rem;
+        margin-bottom: 24px;
+    }
+
+    #textBox {
+        font-size: 1.8rem;
         padding: 12px;
     }
 
-    #result {
-        font-size: 2.5rem;
+    .unit-selector {
+        flex-direction: column;
+        gap: 8px;
     }
 
     .unit-label {
-        padding: 10px 5px;
-        font-size: 0.75rem;
+        padding: 10px;
+        font-size: 0.8rem;
+    }
+
+    #result {
+        font-size: 2.2rem;
+    }
+
+    .result-container {
+        margin-top: 24px;
+        padding-top: 24px;
+    }
+}
+
+@media (max-height: 700px) {
+    body {
+        align-items: flex-start;
+        padding-top: 20px;
+        overflow-y: auto;
     }
 }
 
