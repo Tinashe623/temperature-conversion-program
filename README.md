@@ -1,6 +1,6 @@
 # TempFlow | Modern Temperature Conversion
 
-**Live App: [tempflow-app.netlify.app](https://tempflow-app.netlify.app/)**
+**Live App: [tinashe-temp-converter.vercel.app](https://tinashe-temp-converter.vercel.app/)**
 
 TempFlow is a sleek, fast, and responsive temperature conversion tool built with modern web technologies. It allows users to convert between Celsius, Fahrenheit, and Kelvin in real-time with a beautiful glassmorphism UI.
 
@@ -18,11 +18,11 @@ TempFlow is a sleek, fast, and responsive temperature conversion tool built with
 
 ## 🚀 Deployment
 
-This project is configured for easy deployment on **Netlify**.
+This project is configured for easy deployment on **Vercel**.
 
 1. Fork or clone this repository.
-2. Connect your repository to Netlify.
-3. Netlify will automatically detect the static files and the `netlify.toml` configuration.
+2. Import project into Vercel.
+3. Vercel will automatically detect the static files.
 4. Deploy and enjoy!
 
 ## 🛠️ Tech Stack
